@@ -1,0 +1,17 @@
+<h2>Welcome to Book Store </h2>
+<div id="content" ng-controller="MainCtrl">
+    <input type='text' 
+    placeholder="Search for a Book "  #searchid/>   
+</div>
+<button type="button" (click)="search(searchid.value)" class="btn btn-primary">Search</button>
+
+<ul class="navLinks">
+    <li>
+    <a routerLink="/add">Add Book</a>
+</li>
+ | 
+<li><a routerLink="/viewall">View List</a></li>
+</ul>
+
+
+<!-- search method if it is true you call the serve  -->
