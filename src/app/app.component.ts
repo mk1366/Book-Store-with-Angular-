@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = "Hello world"
-  
-  outputTitle: string;
-}
 
+export class AppComponent {
+  msg="Hello World"
+  
+  outputMsg:string;
+}

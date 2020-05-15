@@ -3,8 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddBookComponent } from './add-book/add-book.component';
 import { ViewListComponent } from './view-list/view-list.component';
 import { UpdateComponent } from './update/update.component';
-import { ViewBookComponent } from './view-book/view-book.component';
-import { PageNotFoundComponent } from './header/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddBookReactiveComponent } from './add-book-reactive/add-book-reactive.component';
+import { GithubUserComponent } from './github-user/github-user.component';
+import { CovidInfoComponent } from './covid-info/covid-info.component';
 
 
 const routes: Routes = [
@@ -18,14 +20,21 @@ const routes: Routes = [
     path:'update/:id', component:UpdateComponent
   },
   {
-    path:'view/:id', component:ViewBookComponent
+    path:'add-book-reactive', component:AddBookReactiveComponent
   },
   {
-    path:'not-Found', component:PageNotFoundComponent
+    path:'github-info',component:GithubUserComponent
+  },
+  {
+    path:'covid-info',component:CovidInfoComponent
+  },
+  {
+    path:'not-found',component:PageNotFoundComponent
   },
   {
     path:'**',redirectTo:'/not-found'
   }
+
 ];
 
 @NgModule({

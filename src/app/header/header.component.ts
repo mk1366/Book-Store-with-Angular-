@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BookDataService } from '../book-data.service';
-import { Route } from '@angular/compiler/src/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,15 +7,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private bookservice:BookDataService, private router:Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  search(id: number)
-  {
-    if (this.bookservice.searchById(id)) {
-      this.router.navigate(['/view/' + id])
-    }
-    else {alert('bookid are not found')}
-  }
+
 }
